@@ -2,29 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejercicio 2: Contar frutas en la canasta</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #fff8e1; padding: 20px; }
-        h1 { color: #e65100; }
-        .fruta { background: #fff; border-left: 5px solid #fb8c00; margin: 6px 0; padding: 8px 12px; }
-        .fin { font-weight: bold; color: #bf360c; margin-top: 12px; }
-    </style>
+    <title>Contar frutas</title>
 </head>
 <body>
-    <h1>🧺 Ejercicio 2: Contar frutas en la canasta</h1>
-    <p>Situación: Tomo una fruta, la cuento y luego miro si hay más.</p>
+    <h1>Contar frutas en la canasta</h1>
     <?php
-    $canasta = ["Manzana", "Plátano", "Naranja", "Pera", "Uva", "Mango"];
-    $contador = 0;   // Frutas contadas
+    $frutas = 6;
+    $contador = 1;
 
-    // do while: toma y cuenta una fruta, DESPUÉS revisa si quedan más
     do {
-        $fruta = $canasta[$contador];
+        echo "Fruta numero $contador <br>";
         $contador++;
-        echo "<div class='fruta'>🍎 Tomé la fruta $contador: $fruta</div>";
-    } while ($contador < count($canasta));
+    } while ($contador <= $frutas);
 
-    echo "<p class='fin'>✅ En total hay $contador frutas en la canasta.</p>";
+    echo "<br>Total de frutas: $frutas";
     ?>
 </body>
 </html>
